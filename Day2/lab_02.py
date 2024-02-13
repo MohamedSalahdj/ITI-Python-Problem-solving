@@ -46,14 +46,32 @@ increased by one from start.
 '''
 
 def task_three(length, start):
-    array_of_integer = [ number for number in range(start, length+1)]
+    array_of_integer = [ number for number in range(start, start+length)]
     return array_of_integer
 
-print(task_three(10, 2))
+print(task_three(3,7))
 
 
+"""write a function that takes a number as an argument and if the
+number divisible by 3 return "Fizz" and if it is divisible by 5 return
+"buzz" and if is is divisible by both return "FizzBuzz"""
 
 def task_four(number):
     return "FizzBuzz" if number % 3 == 0 and  number % 5 ==0 else "Fizz" if number % 3 ==0 else 'buzz' if number % 5 == 0 else "not divisiable by '5' or '3'"
 
-print(task_four(2))
+# print(task_four(2))
+
+
+"""
+    Write a function which has an input of a string from user then it
+    will return the same string reversed.
+"""
+
+def task_five():
+    string = input("Enter string ")
+
+    return string[::-1]
+
+print(task_five())
+
+
