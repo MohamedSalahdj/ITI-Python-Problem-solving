@@ -53,3 +53,7 @@ print(task_three(10, 2))
 
 
 
+def task_four(number):
+    return "FizzBuzz" if number % 3 == 0 and  number % 5 ==0 else "Fizz" if number % 3 ==0 else 'buzz' if number % 5 == 0 else "not divisiable by '5' or '3'"
+
+print(task_four(2))
