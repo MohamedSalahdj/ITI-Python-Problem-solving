@@ -36,5 +36,20 @@ def task_two():
             table.append(i*j)
         tables_lists.append(table)
     return tables_lists
-print(task_two())
+# print(task_two())
+
+
+'''
+Write a function that accepts two arguments (length, start) to
+generate an array of a specific length filled with integer numbers
+increased by one from start.
+'''
+
+def task_three(length, start):
+    array_of_integer = [ number for number in range(start, length+1)]
+    return array_of_integer
+
+print(task_three(10, 2))
+
+
 
