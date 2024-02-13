@@ -49,7 +49,7 @@ def task_three(length, start):
     array_of_integer = [ number for number in range(start, start+length)]
     return array_of_integer
 
-print(task_three(3,7))
+# print(task_three(3,7))
 
 
 """write a function that takes a number as an argument and if the
@@ -72,6 +72,49 @@ def task_five():
 
     return string[::-1]
 
-print(task_five())
+# print(task_five())
 
 
+import re
+
+"""
+    Ask the user for his name then confirm that he has entered his
+    name(not an empty string/integers). then proceed to ask him for
+    his email and print all this data (Bonus) check if it is a valid email
+    or not
+"""
+def task_six():
+    name = input("Enter your name: ")
+    if name.isalpha() and not name.isspace():
+        print("\tname vaild")
+    else:
+        print("Your name is not vaild\n")
+        task_six()
+
+    email = input("Enter your email: ") 
+    return f"name: {name} \nemail: {email}"
+
+# print(task_six())
+
+
+"""
+    Write a function that takes a string and prints the
+    longest alphabetical ordered substring occurred For example, if
+    the string is 'abdulrahman' then the output is: Longest substring in
+    alphabetical order is: abdu
+"""
+
+def task_seven(string):
+    letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    dict = {}
+    word = ''
+    for i in range(len(string)-1):
+        if letters.index(string[i]) < letters.index(string[i+1]):
+            word+=string[i]
+        else:
+            word+=string[i]
+            dict[len(word)] = word
+            word=''
+    keys = list(dict.keys())
+    return dict[max(keys)]
+print(task_seven('abdulrahman'))
