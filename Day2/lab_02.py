@@ -2,7 +2,7 @@
 Fill an array of 5 elements from the user, 
 Sort it in descending and ascending orders then display the output.
 '''
-def task_two():
+def task_one():
     print("--"*15, 'task-02', "--"*15)
     l = [int(input(f"Enter only number'{i+1}': ")) for i in range(5)]
     l.sort()
@@ -11,7 +11,7 @@ def task_two():
     print(f"sort it descending {l}")
 
     print(l)
-# task_two()
+# task_one()
 
 
 ''' 
@@ -26,16 +26,15 @@ number passed
 
 """
 
-def task_six(): 
+def task_two(): 
     tables_lists = []
     number = input("Enter table number will stoped it: ")
-    number =  int(number) if number.isdigit() else task_six()
+    number =  int(number) if number.isdigit() else task_two()
     for i in range(1, number+1):
         table= []
         for j in range(1,i+1):
             table.append(i*j)
         tables_lists.append(table)
     return tables_lists
-print(task_six())
-
+print(task_two())
 
