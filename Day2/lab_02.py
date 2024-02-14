@@ -29,7 +29,10 @@ number passed
 def task_two(): 
     tables_lists = []
     number = input("Enter table number will stoped it: ")
-    number =  int(number) if number.isdigit() else task_two()
+    if number.isdigit():
+        number = int(number) 
+    else:
+        task_two()
     for i in range(1, number+1):
         table= []
         for j in range(1,i+1):
@@ -83,6 +86,10 @@ import re
     his email and print all this data (Bonus) check if it is a valid email
     or not
 """
+def is_email_vaild(email):
+    email_pattern = r'^[\w\.-]+@[a-zA-Z]+\.[a-zA-Z]{3,}$'
+    return f"\t--- Your mail '{email}' is vaild" if re.match(email_pattern, email) is not None else f"\t---- Your email '{email}' is not vaild"
+
 def task_six():
     name = input("Enter your name: ")
     if name.isalpha() and not name.isspace():
@@ -90,9 +97,9 @@ def task_six():
     else:
         print("Your name is not vaild\n")
         task_six()
-
     email = input("Enter your email: ") 
-    return f"name: {name} \nemail: {email}"
+    print(is_email_vaild(email))
+    return f"This your data entered\nname: {name} \nemail: {email}"
 
 # print(task_six())
 
@@ -143,6 +150,68 @@ def task_eight():
             total+=number
         else:
             print("Enter vaild number")
-task_eight()
+# task_eight()
+
+"""
+Word guessing game (hangman)
+
+    ○ A list of words will be hardcoded in your program, out of
+    which the interpreter will
+
+    ○choose 1 random word.
+    ○The user first must input their names
+
+    ○Ask the user to guess any alphabet. If the random word
+    contains that alphabet, it
+
+    ○will be shown as the output(with correct placement)
+
+    ○Else the program will ask you to guess another alphabet.
+
+    ○Give 7 turns maximum to guess the complete word.
+"""
+
+
+def task_nine():
+    array_of_word = ['uml', 'oop', 'python', 'julia', 'flask']
+    name = input("Enter your name: ")
+    print(f"Welcome {name}")
+    number = input(f"Choose Randome Word from '1' to {len(array_of_word)}: ")
+    if number.isdigit():
+        geted_word_position =  int(number)  
+    else:
+        print("Enter vaild input")
+        task_nine()
+    geted_word_position-=1
+    if geted_word_position >= 0 and geted_word_position < len(array_of_word):
+        print(f"\t------ you choose word contain '{len(array_of_word[geted_word_position])}' character ------")
+        print("you have '7' attempt to guess word every once enter single letter")
+    else:
+        print("Your input not correct")
+        task_nine()
+    i = 0
+    j = 0
+    word_guessed_length = len(array_of_word[geted_word_position])
+    word = ''
+    while i < 7 and word_guessed_length !=0:
+        print(word_guessed_length)
+        letter = input("Enter letter ").lower()
+        if array_of_word[geted_word_position][j] == letter :
+            print('Yes your guess correct :)))')
+            word+= letter
+            j+=1
+            word_guessed_length-=1
+        else:
+            print(f'\t ----- guess not correct  again\n The rest \'{7-(i+1)}\' attempt ----')
+            
+        i+=1
+    return f"You win your guess correct '{word.capitalize()}'" if word == array_of_word[geted_word_position] else 'try in next ---'
+
+print(task_nine())
+
+
+
+
+
 
 
