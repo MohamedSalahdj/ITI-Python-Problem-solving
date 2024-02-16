@@ -1,8 +1,7 @@
-import json, os
+import json
 from .pattern_validation import is_name_vaild, is_email_vaild, is_password_vaild, is_mobile_number_vaild
 from .manipulation_users_file import read_users_from_json, add_user_to_users_json
 
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 
 users = {}
@@ -50,6 +49,4 @@ def register():
         "Login": "False"
     }
     
-    add_user_to_users_json(users, '../Users/users.json')
-
-    
+    add_user_to_users_json(users, 'DB/Users/users.json')

@@ -1,4 +1,9 @@
-import AuthenticationSystem
+import os
+import AuthenticationSystem as authSys
+import HandleProjects 
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+print(os.getcwd())
 
 sperator = '-----'
 
@@ -7,19 +12,22 @@ def main():
         print(f"\t{sperator} To Regitser Enter '1' {sperator} \n\t{sperator} To Login Enter '2' {sperator} \n\t{sperator} To Exist Enter '3' {sperator} ")
         option = input("Enter Your option:..... ")
         if option == '1':
-            AuthenticationSystem.register()
+            authSys.register()
         elif option == '2':
-            AuthenticationSystem.login()
+            emailaccount = authSys.login()
+            # print(emailaccount)
             while True:
-                print(f"\t{sperator} To Show All Projects Enter '1' {sperator} \n\t{sperator} To Edit Your Own Projects '2' {sperator} \n\t{sperator} To Delete Your Own Projects Enter '3' {sperator}\n\t{sperator} To Exist Enter '4' {sperator} ")
+                print(f"\t{sperator} To Show All Projects Enter '1' {sperator} \n\t{sperator} To Create new Project Enter '2' {sperator} \n\t{sperator} To Edit Your Own Projects '3' {sperator} \n\t{sperator} To Delete Your Own Projects Enter '4' {sperator}\n\t{sperator} To Exist Enter '5' {sperator} ")
                 project_option = input("Enter Your option:..... ")
                 if project_option == '1':
-                    print("Show all projects ----")
+                    HandleProjects.show_all_projects()
                 elif project_option == '2':
-                    print("Edit your projects ----")
+                    HandleProjects.craete_new_project(emailaccount)
                 elif project_option == '3':
-                    print("Delete your projects ----")
+                    HandleProjects.edit_your_projects()
                 elif project_option == '4':
+                    HandleProjects.delete_your_projects()
+                elif project_option == '5':
                     print("returned to main menu----")
                     break
                 else:

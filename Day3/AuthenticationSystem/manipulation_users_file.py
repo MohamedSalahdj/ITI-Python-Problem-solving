@@ -1,6 +1,6 @@
 import json
 
-def read_users_from_json(filename="../Users/users.json"):
+def read_users_from_json(filename="DB/Users/users.json"):
     try:
         users_file = open(filename, 'r')
         data = json.load(users_file )
@@ -10,8 +10,8 @@ def read_users_from_json(filename="../Users/users.json"):
         return data
 
 
-def add_user_to_users_json(new_user, filename="../Users/users.json"):
-    all_users = read_users_from_json('../Users/users.json')
+def add_user_to_users_json(new_user, filename="DB/Users/users.json"):
+    all_users = read_users_from_json(filename)
     all_users.update(new_user)
     try:
         users_file = open(filename, 'w')

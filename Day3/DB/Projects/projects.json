@@ -1,0 +1,17 @@
+{
+    "mohamedsa@gmail.com": {
+        "ProjectTitle": "DjStore",
+        "Details": "Django store .......",
+        "TotalTarget ": "20000",
+        "startTime": "10-3-2023",
+        "endTime": "10-5-2023"
+    },
+    "saadgawish@gmail.com": {
+        "ProjectTitle": "FlaskStore",
+        "Details": "Flask store .......",
+        "TotalTarget ": "30000",
+        "startTime": "10-3-2024",
+        "endTime": "10-5-2024"
+    }
+   
+}
