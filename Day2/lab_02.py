@@ -1,6 +1,6 @@
 '''
-Fill an array of 5 elements from the user, 
-Sort it in descending and ascending orders then display the output.
+    Fill an array of 5 elements from the user, 
+    Sort it in descending and ascending orders then display the output.
 '''
 def task_one():
     print("--"*15, 'task-02', "--"*15)
@@ -15,8 +15,8 @@ def task_one():
 
 
 ''' 
-Write a program that generate a multiplication table from 1 to the
-number passed
+    Write a program that generate a multiplication table from 1 to the
+    number passed
 '''
 
 """
@@ -33,19 +33,21 @@ def task_two():
         number = int(number) 
     else:
         task_two()
+        # number = ''
+        # return tables_lists
     for i in range(1, number+1):
         table= []
         for j in range(1,i+1):
             table.append(i*j)
         tables_lists.append(table)
     return tables_lists
-# print(task_two())
+print(task_two())
 
 
 '''
-Write a function that accepts two arguments (length, start) to
-generate an array of a specific length filled with integer numbers
-increased by one from start.
+    Write a function that accepts two arguments (length, start) to
+    generate an array of a specific length filled with integer numbers
+    increased by one from start.
 '''
 
 def task_three(length, start):
@@ -55,9 +57,11 @@ def task_three(length, start):
 # print(task_three(3,7))
 
 
-"""write a function that takes a number as an argument and if the
-number divisible by 3 return "Fizz" and if it is divisible by 5 return
-"buzz" and if is is divisible by both return "FizzBuzz"""
+"""
+    write a function that takes a number as an argument and if the
+    number divisible by 3 return "Fizz" and if it is divisible by 5 return
+    "buzz" and if is is divisible by both return "FizzBuzz
+"""
 
 def task_four(number):
     return "FizzBuzz" if number % 3 == 0 and  number % 5 ==0 else "Fizz" if number % 3 ==0 else 'buzz' if number % 5 == 0 else "not divisiable by '5' or '3'"
@@ -128,12 +132,13 @@ def task_seven(string):
 
 
 """
-Write a program which repeatedly reads numbers until the user
-enters “done”.
-    ○ Once “done” is entered, print out the total, count, and
-    average of the numbers.
-    ○If the user enters anything other than a number, detect their
-    mistake, print an error message and skip to the next number.
+    Write a program which repeatedly reads numbers until the user
+    enters “done”.
+        ○ Once “done” is entered, print out the total, count, and
+        average of the numbers.
+
+        ○If the user enters anything other than a number, detect their
+        mistake, print an error message and skip to the next number.
 """
 
 def task_eight():
@@ -155,22 +160,22 @@ def task_eight():
 """
 Word guessing game (hangman)
 
-    ○ A list of words will be hardcoded in your program, out of
-    which the interpreter will
+    ○  A list of words will be hardcoded in your program, out of
+     which the interpreter will
 
-    ○choose 1 random word.
-    ○The user first must input their names
+    ○ choose 1 random word.
 
-    ○Ask the user to guess any alphabet. If the random word
+    ○ The user first must input their names
+
+    ○ Ask the user to guess any alphabet. If the random word
     contains that alphabet, it
 
-    ○will be shown as the output(with correct placement)
+    ○ will be shown as the output(with correct placement)
 
-    ○Else the program will ask you to guess another alphabet.
+    ○ Else the program will ask you to guess another alphabet.
 
-    ○Give 7 turns maximum to guess the complete word.
+    ○ Give 7 turns maximum to guess the complete word.
 """
-
 
 def task_nine():
     array_of_word = ['uml', 'oop', 'python', 'julia', 'flask']
@@ -207,7 +212,7 @@ def task_nine():
         i+=1
     return f"You win your guess correct '{word.capitalize()}'" if word == array_of_word[geted_word_position] else 'try in next ---'
 
-print(task_nine())
+# print(task_nine())
 
 
 

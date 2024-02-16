@@ -46,7 +46,8 @@ def register():
         "LastName" : last_name,
         "Email" : email,
         "Password" : password,
-        "MobileNumber" : mobile_number
+        "MobileNumber" : mobile_number,
+        "Login": "False"
     }
     
     add_user_to_users_json(users, '../Users/users.json')
