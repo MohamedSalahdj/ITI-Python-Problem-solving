@@ -3,7 +3,7 @@ from .manipulation_users_file import read_users_from_json, add_user_to_users_jso
 
 def login():
     all_emails = list(read_users_from_json().keys())
-    print(all_emails)
+    # print(all_emails)
 
     email = input("Enter your email:-- ")
     

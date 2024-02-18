@@ -1,17 +1,55 @@
 {
     "mohamedsa@gmail.com": {
-        "ProjectTitle": "DjStore",
-        "Details": "Django store .......",
-        "TotalTarget ": "20000",
-        "startTime": "10-3-2023",
-        "endTime": "10-5-2023"
+        "DjStore": {
+            "ProjectTitle": "DjStore",
+            "Details": "Django store .......",
+            "TotalTarget ": "20000",
+            "startTime": "10-3-2023",
+            "endTime": "10-5-2023"
+        },
+        "PHPE-commerce": {
+            "ProjectTitle": "PHPE-commerce",
+            "Details": "Django store .......",
+            "TotalTarget ": "20000",
+            "startTime": "10-3-2023",
+            "endTime": "10-5-2023"
+        },
+        "JSToDoApp": {
+            "ProjectTitle": "JSToDoApp",
+            "Details": "to app project ....",
+            "TotalTarget ": "20000",
+            "startTime": "18-6-1999",
+            "endTime": "18-6-2020"
+        },
+        "juliaApp": {
+            "ProjectTitle": "juliaApp",
+            "Details": "juliaappdetails....",
+            "TotalTarget ": "20000",
+            "startTime": "186-1999",
+            "endTime": "20-6-1999"
+        },
+        "ReactAPP": {
+            "ProjectTitle": "ReactAPP",
+            "Details": "reactappp.........",
+            "TotalTarget ": "350000",
+            "startTime": "18-5-2024",
+            "endTime": "18-9-2024"
+        },
+        "AngularAPP": {
+            "ProjectTitle": "AngularAPP",
+            "Details": "AngularAPP.............",
+            "TotalTarget ": "202222",
+            "startTime": "2023-6-18",
+            "endTime": "2023-9-29"
+        }
     },
-    "saadgawish@gmail.com": {
-        "ProjectTitle": "FlaskStore",
-        "Details": "Flask store .......",
-        "TotalTarget ": "30000",
-        "startTime": "10-3-2024",
-        "endTime": "10-5-2024"
+    "saadsnlk@gmail.com": {
+        "PythonBookAPP": {
+            "ProjectTitle": "PythonBookAPP",
+            "Details": "bookappdetails",
+            "TotalTarget ": "20000",
+            "startTime": "18-6-1999",
+            "endTime": "18-6-2024"
+        }
     }
-   
 }
