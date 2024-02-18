@@ -9,7 +9,7 @@ def delete_your_projects(emailaccount):
     project_name = input("Enter Project Name: ")
     
     while project_name not in list(all_user_projects.keys()):
-        print(f"you don't have '{project_name}' Enter vaild name\t OR exit to exit")
+        print(f"you don't have '{project_name}' Enter vaild name\t Enter exit to exit")
         project_name = input("Enter Project Name: ")
         if project_name == 'exit':
             return
